@@ -1,0 +1,102 @@
+@mixin radius($px){
+
+  border-radius: $px;
+  -moz-border-radius: $px;
+  -webkit-border-radius: $px;
+  -o-border-radius: $px;
+
+}
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin transition( $c: 1s){
+
+  transition: $c;
+  -moz-transition: $c;
+  -webkit-transition: $c;
+  -o-transition: $c;
+}
+
+@mixin calc($key, $value) {
+  #{$key}: -webkit-calc(#{$value});
+  #{$key}: -moz-calc(#{$value});
+  #{$key}: calc(#{$value});
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+@mixin box-shadow( $none: none ){
+  -webkit-box-shadow: $none;
+  box-shadow: $none;
+  border: $none;
+}
+
+@mixin fontInsanibu() {
+  font-family: 'insanibu';
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+}
+
+@mixin fontInsanibuTitulo() {
+  font-family: 'insanibu';
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+@mixin input-placeholder($color){
+    &::-webkit-input-placeholder{
+      color: $color;
+    }
+
+    &:-moz-placeholder{
+      color: $color;
+    }
+    &::-moz-placeholder {
+      color: $color;
+    }
+    &:-ms-input-placeholder{
+      color: $color;
+    }
+  }
