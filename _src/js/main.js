@@ -1,11 +1,10 @@
-angular.module('wheater-beer', ['ngRoute', 'ngResource'])
-.config(function($routeProvider){
+angular.module('weather-beer', ['ngRoute']).config(function($routeProvider){
 
-  $routeProvider.when('/lista', {
-    templateUrl: 'views/list-times.html',
-    controller: 'TimeController'
+  $routeProvider.when('/change', {
+    templateUrl: 'views/change.html',
+    controller: 'WeatherController'
   });
 
-  $routeProvider.otherwise({redirectTo: '/lista'});
+  $routeProvider.otherwise({redirectTo: '/change'});
 
 });
