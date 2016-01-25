@@ -1,0 +1,44 @@
+.choice{
+
+  background:  url('../images/bg.png') repeat top center /cover,
+  url('../images/home/bg-foto.jpg') no-repeat top center /cover;
+  position: relative;
+
+  .box-all{
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+
+    .box-logo{
+
+    }
+
+    .box-login{
+      margin-top: 30px;
+      background: $white;
+      @include radius(3px);
+      padding: 20px;
+
+      h1{
+        color: $brown;
+        font-size: 11px;
+        font-weight: black;
+        text-transform: uppercase;
+      }
+
+      form{
+
+        margin: 20px auto 0px auto;
+
+        width: 300px;
+      }
+    }
+  }
+
+}

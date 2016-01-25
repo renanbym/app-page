@@ -1,10 +1,18 @@
-angular.module('weather-beer', ['ngRoute']).config(function($routeProvider){
+'use strict';
+
+var app = angular.module('weather-beer', ['ngRoute']);
+
+app.config(function($routeProvider){
 
   $routeProvider.when('/change', {
     templateUrl: 'views/change.html',
-    controller: 'WeatherController'
-  });
+    controller: 'ChoiceController',
+    class: 'choice'
+  }).when('/', {
+    templateUrl: 'views/weather.html',
+    controller: 'WeatherController',
+    class: 'weather'
+  })
 
   $routeProvider.otherwise({redirectTo: '/change'});
-
 });

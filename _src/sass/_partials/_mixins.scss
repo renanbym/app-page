@@ -73,17 +73,7 @@
   border: $none;
 }
 
-@mixin fontInsanibu() {
-  font-family: 'insanibu';
-  text-transform: uppercase;
-  letter-spacing: 1.7px;
-}
 
-@mixin fontInsanibuTitulo() {
-  font-family: 'insanibu';
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-}
 
 @mixin input-placeholder($color){
     &::-webkit-input-placeholder{

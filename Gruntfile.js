@@ -12,7 +12,8 @@ module.exports = function(grunt) {
         files: {
           'assets/js/main.js' : [
             '_src/js/main.js',
-            '_src/js/controllers/*.js'
+            '_src/js/controllers/*.js',
+            '_src/js/directives/*.js'
           ]
         }
       }
@@ -28,14 +29,14 @@ module.exports = function(grunt) {
       }
     }
 
-    ,imagemin: {                          // Task
+    ,imagemin: {
 
-      dynamic: {                         // Another target
+      dynamic: {
         files: [{
-          expand: true,                  // Enable dynamic expansion
-          cwd: '_src/images',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'assets/images'                  // Destination path prefix
+          expand: true,
+          cwd: '_src/images',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'assets/images'
         }]
       }
     }
