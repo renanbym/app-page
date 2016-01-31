@@ -1,0 +1,27 @@
+<div class="box-all">
+
+  <div class="box-logo">
+    <img src="assets/images/home/logo.png" alt="Weather Beer" title="Weather Beer" />
+  </div>
+
+  <div class="box-login">
+
+    <h1>Tá afim de saber que cerveja tomar?</h1>
+    <h1>Escolha um local e descubra =)</h1>
+
+    <form class="fm_default" ng-submit="send()">
+
+      <select class="focus" name="estado">
+        <option value="">Estado</option>
+        <option ng-repeat="location in locations" value="{{location._id}}" >{{location.name}}</option>
+      </select>
+
+      <select class="" name="cidade">
+        <option value="">Cidade</option>
+        <option ng-repeat="location in locations" value="{{location.name}}" >{{location.name}}</option>
+      </select>
+
+      <input type="submit" value="Escolher" />
+  </form>
+</div>
+</div>

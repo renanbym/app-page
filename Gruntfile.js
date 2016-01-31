@@ -11,10 +11,11 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           'assets/js/main.js' : [
-            '_src/js/main.js',
-            '_src/js/controllers/*.js',
-            '_src/js/directives/*.js'
-          ]
+            'source/js/main.js',
+            'source/js/controllers/*.js',
+            'source/js/directives/*.js'
+          ],
+            'assets/js/chrome.js' : [ 'source/js/chrome.js', ]
         }
       }
 
@@ -24,7 +25,7 @@ module.exports = function(grunt) {
       dist : {
         options : { style : 'compressed' },
         files : {
-          'assets/css/style.css' : '_src/sass/style.scss'
+          'assets/css/style.css' : 'source/sass/style.scss'
         }
       }
     }
@@ -34,7 +35,7 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: '_src/images',
+          cwd: 'source/images',
           src: ['**/*.{png,jpg,gif}'],
           dest: 'assets/images'
         }]
@@ -42,9 +43,9 @@ module.exports = function(grunt) {
     }
 
     ,watch : {
-      js:  { files: '_src/js/**/*.js', tasks: [ 'uglify' ] },
-      sass:  { files: '_src/sass/**/*.scss', tasks: [ 'sass' ] },
-      images:  { files: '_src/images/**/*.{png,jpg,gif}', tasks: [ 'imagemin' ] }
+      js:  { files: 'source/js/**/*.js', tasks: [ 'uglify' ] },
+      sass:  { files: 'source/sass/**/*.scss', tasks: [ 'sass' ] },
+      images:  { files: 'source/images/**/*.{png,jpg,gif}', tasks: [ 'imagemin' ] }
     }
 
 

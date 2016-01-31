@@ -1,3 +1,15 @@
 {
-  
+
+  "manifest_version": 2,
+  "name": "Weather Beer",
+  "version": "0.1",
+
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+
+  "background": {
+    "scripts": ["assets/js/chrome.js"]
+  }
+
 }
