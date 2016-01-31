@@ -8,7 +8,7 @@ app.config(function($routeProvider){
     templateUrl: 'views/change.html',
     controller: 'ChoiceController',
     class: 'choice'
-  }).when('/', {
+  }).when('/weather', {
     templateUrl: 'views/weather.html',
     controller: 'WeatherController',
     class: 'weather'
