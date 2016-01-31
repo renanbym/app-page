@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             'source/js/controllers/*.js',
             'source/js/directives/*.js'
           ],
-            'assets/js/chrome.js' : [ 'source/js/chrome.js', ]
+          'assets/js/chrome.js' : [ 'source/js/chrome.js', ]
         }
       }
 
@@ -48,7 +48,6 @@ module.exports = function(grunt) {
       images:  { files: 'source/images/**/*.{png,jpg,gif}', tasks: [ 'imagemin' ] }
     }
 
-
     ,connect: {
       server: {
         options: {
@@ -66,7 +65,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask( 'default', ['uglify', 'sass','imagemin'] );
+  grunt.registerTask( 'default', ['uglify', 'sass','imagemin', 'connect'] );
 
   grunt.registerTask( 'w', [ 'connect', 'watch'] );
 
